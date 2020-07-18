@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Historial.historialController">
+   <children>
+      <ImageView fitHeight="610.0" fitWidth="936.0">
+         <image>
+            <Image url="@../inicio/jardineria_1576113e405a3f.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="reg" layoutX="16.0" layoutY="558.0" mnemonicParsing="false" onAction="#regresar" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: red;" text="Regresar al menú" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tabla" layoutX="455.0" layoutY="325.0" prefHeight="265.0" prefWidth="460.0" style="-fx-background-color: WHITE;">
+        <columns>
+          <TableColumn fx:id="idProductoCol" prefWidth="87.0" text="Id Producto" />
+          <TableColumn fx:id="nombreCol" prefWidth="87.0" text="Nombre" />
+            <TableColumn fx:id="tipoCol" prefWidth="79.0" text="Tipo" />
+            <TableColumn fx:id="fechaCol" prefWidth="106.0" text="Fecha Fotografia" />
+            <TableColumn fx:id="idFotografiaCol" prefWidth="100.0" text="Id Fotografia" />
+        </columns>
+      </TableView>
+      <Button fx:id="fotografia" layoutX="161.0" layoutY="95.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: greenyellow; -fx-background-radius: 13;" text="FOTOGRAFIA" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="productoCombo" layoutX="16.0" layoutY="33.0" onAction="#listCombo" prefHeight="36.0" prefWidth="135.0" promptText="Id Producto" style="-fx-background-color: pink;" />
+      <Button layoutX="161.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregar" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #0478c5; -fx-background-radius: 13;" text="REGISTRAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="161.0" layoutY="312.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #0478c5; -fx-background-radius: 13;" text="ELIMINAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="161.0" layoutY="191.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: #0478c5; -fx-background-radius: 13;" text="ACTUALIZAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="idE" layoutX="16.0" layoutY="312.0" prefHeight="36.0" prefWidth="135.0" promptText="Id Fotografía" style="-fx-background-color: white;" />
+      <DatePicker fx:id="fecha" editable="false" layoutX="16.0" layoutY="95.0" prefHeight="36.0" prefWidth="135.0" promptText="FECHA DE FOTO" />
+      <ImageView fx:id="slideshowImageView" fitHeight="124.0" fitWidth="135.0" layoutX="294.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="visualizarImagen" fitHeight="252.0" fitWidth="399.0" layoutX="492.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="ruta" editable="false" layoutX="16.0" layoutY="151.0" prefHeight="25.0" prefWidth="235.0" promptText="Ruta" visible="false" />
+      <ComboBox fx:id="actualizacion" layoutX="16.0" layoutY="191.0" prefHeight="36.0" prefWidth="135.0" promptText="Actualizacion" style="-fx-background-color: pink;" />
+      <TextField fx:id="idA" layoutX="16.0" layoutY="241.0" prefHeight="36.0" prefWidth="135.0" promptText="Id Fotografia" />
+      <TextField fx:id="nomM" layoutX="292.0" layoutY="35.0" prefHeight="32.0" prefWidth="140.0" promptText="Nombre" />
+      <TextField fx:id="condM" layoutX="292.0" layoutY="97.0" prefHeight="32.0" prefWidth="140.0" promptText="Condición" />
+   </children>
+</AnchorPane>

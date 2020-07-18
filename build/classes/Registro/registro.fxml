@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="900.0" style="-fx-background-color: #00f914;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Registro.ControllerRegistroRiego">
+   <children>
+      <ImageView fitHeight="510.0" fitWidth="900.0">
+         <image>
+            <Image url="@../inicio/jardineria_1576113e405a3f.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tabla" layoutX="303.0" layoutY="63.0" prefHeight="433.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="productoCol" prefWidth="93.0" text="Id Producto">
+               <cellValueFactory>
+                    <PropertyValueFactory property="idProducto" />             
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nombreCol" prefWidth="99.33331298828125" text="Nombre">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nombre" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tipoCol" prefWidth="95.66668701171875" text="Tipo">
+                <cellValueFactory>
+                    <PropertyValueFactory property="tipo" />             
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="condicionCol" prefWidth="108.0" text="Condición">
+               <cellValueFactory>
+                  <PropertyValueFactory property="condicion" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="fechaCol" prefWidth="84.0" text="Fecha Riego">
+               <cellValueFactory>
+                  <PropertyValueFactory property="fecha" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="idRegistroCol" minWidth="0.0" prefWidth="106.6666259765625" text="Id Registro">
+                <cellValueFactory>
+                    <PropertyValueFactory property="idRegistro" />             
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="registrar" layoutX="183.0" layoutY="30.0" mnemonicParsing="false" onAction="#agregar" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #0478c5; -fx-background-radius: 12;" text="Registrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="actualizar" layoutX="183.0" layoutY="183.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #0478c5; -fx-background-radius: 12;" text="Actualizar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="eliminar" layoutX="183.0" layoutY="333.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: #0478c5; -fx-background-radius: 12;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="idActualizar" editable="false" layoutX="14.0" layoutY="183.0" prefHeight="32.0" prefWidth="160.0" promptText="Id Registro" />
+      <TextField fx:id="idEliminar" layoutX="14.0" layoutY="333.0" prefHeight="32.0" prefWidth="160.0" promptText="Id Registro" />
+      <Button fx:id="reg" layoutX="14.0" layoutY="465.0" mnemonicParsing="false" onAction="#regresar" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: red;" text="Regresar al menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="productoCombo" layoutX="14.0" layoutY="32.0" onAction="#listCombo" prefHeight="32.0" prefWidth="160.0" promptText="Id de Producto" style="-fx-background-color: yellowgreen;" />
+      <DatePicker fx:id="pick1" editable="false" layoutX="15.0" layoutY="87.0" prefHeight="32.0" prefWidth="160.0" promptText="FECHA" />
+      <DatePicker fx:id="pick2" editable="false" layoutX="14.0" layoutY="239.0" prefHeight="32.0" prefWidth="160.0" promptText="FECHA" />
+      <TextField fx:id="nomM" layoutX="327.0" layoutY="11.0" prefHeight="32.0" prefWidth="140.0" promptText="Nombre" />
+      <TextField fx:id="tipoM" layoutX="545.0" layoutY="14.0" prefHeight="32.0" prefWidth="140.0" promptText="Tipo" />
+      <TextField fx:id="condM" layoutX="702.0" layoutY="14.0" prefHeight="32.0" prefWidth="140.0" promptText="Condición" />
+      <Button layoutX="211.0" layoutY="119.0" mnemonicParsing="false" onAction="#listCombo" text="Button" />
+   </children>
+</AnchorPane>

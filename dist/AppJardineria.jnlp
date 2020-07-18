@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AppJardineria.jnlp">
+  <information>
+    <title>AppJardineria</title>
+    <vendor>Hugo Ruiz</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AppJardineria.jar" size="2622623" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.16.jar" size="2293144" download="eager" />
+    <jar href="lib\sqljdbc41.jar" size="900894" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AppJardineria" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="inicio.Main"  name="AppJardineria" />
+  <update check="always"/>
+</jnlp>
